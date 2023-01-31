@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <header>
+        <h1>phone book</h1>
+      </header>
+      <div class="container">
+        <div class="formDiv">
+          <form class="form" onsubmit="validateForm(event)">
+            <label for="fullName">Contact Name:</label><br />
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              class="input"
+            /><br />
+
+            <label for="contactNum">contact_no:</label><br />
+            <input
+              type="text"
+              id="contactNum"
+              class="input"
+              name="contactNum"
+              minlength="10"
+            /><br />
+
+            <label for="relation">Relation:</label><br />
+            <input
+              type="text"
+              id="relation"
+              name="relation"
+              class="input"
+            /><br />
+
+            <div class="buttons">
+              <input type="reset" value="reset" />
+              <input type="submit" value="Submit" class="submitInput" />
+            </div>
+          </form>
+        </div>
+        <div class="tableDiv">
+          <table>
+            <thead>
+              <tr>
+                <th>S.NO</th>
+                <th>Name</th>
+                <th>contact no</th>
+                <th>action</th>
+              </tr>
+            </thead>
+            <tbody id="tableData"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
